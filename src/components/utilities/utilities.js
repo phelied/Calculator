@@ -16,15 +16,15 @@ const useStyles = makeStyles({
     },
 });
 
-const Demo = ({ results }) => (
+const Demo = ({ results}) => (
     <div>
         {results.length > 0 && (
             Array.from({ length: Math.ceil(results.length / 4) }, (_, i) => (
                 <div className="row" key={`row${i}`}>
                     {
                         results.slice(i * 4, (i + 1) * 4)
-                            .map((movie) => (
-                                <Button className="card" key={movie}>{movie}</Button>
+                            .map((number) => (
+                                <Button className="card" key={number}>{number}</Button>
                             ))
                     }
                 </div>

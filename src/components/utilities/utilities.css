@@ -1,10 +1,28 @@
-.row {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid gold;
-  }
-  
-  .card {
-    width: 24%;
-    background: silver;
-  }
+.results {
+  text-align: end;
+  padding-right: 2em;
+  padding-top: 1em;
+  height: 2em;
+  margin: 0em 0.3em;
+}
+
+.background-button {
+  margin: 0em 0.3em;
+  width: 23%;
+  height: 5.2em;
+  border: black;
+  background-color: #3c4043;
+  color: white;
+}
+
+.background-calculator {
+  width: 25em;
+  height: 15em;
+  border-radius: 15px;
+}
+
+/* .results:hover {
+  background-color: #696969;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+} */

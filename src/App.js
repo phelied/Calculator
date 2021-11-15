@@ -7,9 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Container className='container'>
           <StylingCellsGrid />
-        </Container>
       </header>
     </div>
   );

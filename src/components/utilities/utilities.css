@@ -7,27 +7,21 @@
 }
 
 .background-button {
-  margin: 0em 0.3em;
+  margin: 0em 0.16em;
   width: 23%;
   height: 5.2em;
   border: 1px solid black;
   background-color: #3c4043;
   color: white;
+  font-weight: 600;
+}
 
+.background-button:hover {
+  opacity: 0.8;
 }
 
 .background-calculator {
   width: 25em;
   height: 15em;
   border-radius: 15px;
-}
-
-/* .results:hover {
-  background-color: #696969;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-} */
-
-.background-button:hover {
-  opacity: 0.8;
 }

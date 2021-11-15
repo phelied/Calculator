@@ -10,9 +10,10 @@
   margin: 0em 0.3em;
   width: 23%;
   height: 5.2em;
-  border: black;
+  border: 1px solid black;
   background-color: #3c4043;
   color: white;
+
 }
 
 .background-calculator {
@@ -26,3 +27,7 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 } */
+
+.background-button:hover {
+  opacity: 0.8;
+}

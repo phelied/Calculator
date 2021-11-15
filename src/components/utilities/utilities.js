@@ -30,7 +30,7 @@ function Demo({ results }) {
                         {
                             results.slice(i * 4, (i + 1) * 4)
                                 .map((character) => (
-                                    <button style={{ backgroundColor: character === "=" ? '#8ab4f9' : '' }} className="background-button" value={character} key={character} onClick={handleClick}> {character} </button>
+                                    <button style={{ backgroundColor: character === "=" ? '#8ab4f9' : '' }} className="background-button" value={character === "x" ? "*": character} key={character} onClick={handleClick}> {character} </button>
                                 ))
                         }
                     </div>

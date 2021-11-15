@@ -8,8 +8,18 @@ const rows = ['(', ')', '%', 'AC', '7', '8', '9', '/', '4', '5', '6', 'x', '1', 
 function Demo({ results }) {
     const [stringData, setStringData] = useState("");
     const handleClick = (e) => {
-        setStringData(stringData + e.target.value);
-      }
+        console.log(e.target.value);
+        switch (e.target.value) {
+            case 'AC':
+                setStringData(""); 
+              break;
+            case '=':
+                setStringData(eval(stringData));
+                break;
+            default:
+                setStringData(stringData + e.target.value); 
+          }
+    }
 
     return (
         <div className="background-calculator">
@@ -20,7 +30,7 @@ function Demo({ results }) {
                         {
                             results.slice(i * 4, (i + 1) * 4)
                                 .map((character) => (
-                                    <button style = {{ backgroundColor : character === "=" ? '#8ab4f9' : ''}} className="background-button" value={character} key={character} onClick={handleClick}> {character} </button>
+                                    <button style={{ backgroundColor: character === "=" ? '#8ab4f9' : '' }} className="background-button" value={character} key={character} onClick={handleClick}> {character} </button>
                                 ))
                         }
                     </div>

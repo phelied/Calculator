@@ -9,16 +9,15 @@ function Demo({ results }) {
     const [stringData, setStringData] = useState("");
     const [number, setNumber] = useState("0");
     const handleClick = (e) => {
-        console.log(e.target.value);
         if (!isNaN(e.target.value)) {
-            setNumber(e.target.value);
+            setNumber(number + e.target.value);
         }
         switch (e.target.value) {
             case 'AC':
                 setStringData("");
                 break;
             case '=':
-                setNumber(eval(stringData));
+                setStringData(new Function('return ' + stringData)());
                 break;
             default:
                 setStringData(stringData + e.target.value);
@@ -27,7 +26,7 @@ function Demo({ results }) {
 
     return (
         <div className="background-calculator">
-            <div className="results">{number}</div>
+            <div className="results">{stringData}</div>
             {results.length > 0 && (
                 Array.from({ length: Math.ceil(results.length / 4) }, (_, i) => (
                     <div className="row" key={`row${i}`}>
